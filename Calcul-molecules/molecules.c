@@ -232,7 +232,6 @@ unsigned int calculateMolecularMass(char *molecule, unsigned int numcharmolecule
             currentatom = molecule[i];
             state = 0;
         }
-        printf("\n acum is: %u", acum);
     }
     if (state == 0)
     {
