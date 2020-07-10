@@ -198,7 +198,6 @@ unsigned int calculateMolecularMass(char *molecule, unsigned int numcharmolecule
 
     for (unsigned int i = 0; i < numcharmolecule; i++)
     {
-        printf("\n acumulator: %u", acum);
         if (state == 0)
         {
             if (isDigit(molecule[i]))
@@ -209,7 +208,6 @@ unsigned int calculateMolecularMass(char *molecule, unsigned int numcharmolecule
             else
             {
                 acum += calculateAtomicMass(currentatom, 1);
-                printf("\n%u", acum);
                 currentatom = molecule[i];
                 //implicit statement: state = 0;
             }
@@ -223,8 +221,8 @@ unsigned int calculateMolecularMass(char *molecule, unsigned int numcharmolecule
             }
             else
             {
-                currentatom = molecule[i];
                 acum += calculateAtomicMass(currentatom, digit1);
+                currentatom = molecule[i];
                 state = 0;
             }
         }
