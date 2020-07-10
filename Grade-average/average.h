@@ -10,7 +10,7 @@
 #include <string.h>
 #include <stdbool.h>
 
-#define 282
+#define MAX_GRADES 282
 /**
  * average returns the average of a list of doubles
  * @param grades
